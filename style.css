@@ -1,0 +1,125 @@
+*{
+    /* this for because we want to set property with intial  */
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.main_box{
+    background: url("photo.jpg");
+    height: 100vh; /* height of viweport */
+    background-size: cover;
+}
+
+#check{
+    display: none; /* it become invisible on the page*/
+}
+
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute; /* relative to its closet portioned which is  now viewport */
+    left: 16px;
+    line-height: 60px; /* for increase height of icon */
+    cursor: pointer;  /* this gives cursor of hand when we hover on it */
+    transition: all 0.2s linear; /* so that hover property apply lineraly and slowly */
+}
+
+.sidebar_menu{
+
+    position: fixed;  /* because we want give position w.r.t document  */
+    left: -300px; /* so that it exist but,doesn't show on page  */
+    height: 100vh; /* because we want that it occupy complete hight of document */
+    width: 300px; 
+    background-color: rgba(255, 255, 255, 0.1); /* white but translucent */
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.25s linear; /* so that hover property apply lineraly and slowly */
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 50px;
+    box-shadow:0px 0px 4px rgba(255, 255, 255, 0.5) ;
+    height: 60px; /* we set it because it height becomes zero because it not have any contact */
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    left: 50px;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two i{
+    color: grey;
+    font-size: 25px;
+    line-height: 50px;
+    position: absolute;
+    left: 270px;
+    cursor: pointer;
+    transition: all 0.2s linear; /* so that hover property apply lineraly and slowly */
+}
+
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li{
+    margin:  6px;
+    padding: 14px 20px;
+}
+
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+    position: absolute;
+    left: 20%;
+    bottom: 50px;
+}
+
+.sidebar_menu .social_media i{
+    color: white;
+    opacity: 0.5;
+    padding:  0 7px ;
+}
+
+.sidebar_menu .menu li:hover{
+    box-shadow:0px 0px 4px rgba(255, 255, 255, 0.5) ;
+}
+
+.btn_one i:hover{
+    font-size: 40px;
+}
+
+.btn_two i:hover{
+    font-size: 30px;
+}
+
+.sidebar_menu .social_media i:hover{
+    font-size: 25px;
+    opacity: 1;                     
+    transform: scale(1.2); 
+}
+
+#check:checked ~.sidebar_menu{ /* ~ sign for siblings   */
+    left: 0; 
+}
+
+#check:checked ~.btn_one{  /* ~ sign for siblings   */
+    opacity: 0;
+}
